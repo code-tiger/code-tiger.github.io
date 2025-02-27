@@ -1,8 +1,11 @@
 export const formAction = "https://formspree.io/f/mnqyokqd";
 
-export default function ContactForm() {
+export default function ContactForm(props: { className?: string }) {
+  const { className } = props;
   return (
-    <section className="contact-form w-full md:w-4/5 lg:w-3/5 mb-10">
+    <section
+      className={["w-full md:w-4/5 lg:w-3/5 mb-10", className].join(" ").trim()}
+    >
       <h2 className="text-3xl font-semibold mb-8 text-on-primary dark:text-on-primary-dark">
         Send us a message
       </h2>

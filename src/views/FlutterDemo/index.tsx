@@ -13,7 +13,7 @@ export default function FlutterDemoView() {
       <IntroSection />
       <IframeSection />
       <ReferenceLink />
-      <ContactForm />
+      <ContactForm className="mx-auto" />
     </ViewWrapper>
   );
 }

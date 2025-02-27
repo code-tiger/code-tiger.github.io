@@ -98,6 +98,6 @@ function HeroSectionLogo() {
 
 function HeroSectionAction() {
   return (
-    <LinkButton href={`#${CONTACT_SECTION_ID}`}>See for yourself</LinkButton>
+    <LinkButton href={`#${CONTACT_SECTION_ID}`}>Contact me</LinkButton>
   );
 }

@@ -8,7 +8,7 @@ export const CONTACT_SECTION_ID = "home-view-contact-section";
 export default function ContactSection() {
   return (
     <section id={CONTACT_SECTION_ID} className="home-view-section">
-      <div className="flex flex-col text-primary items-center">
+      <div className="flex flex-col text-primary items-center md:items-start">
         <ContactForm />
         <ContactInfo />
       </div>
@@ -18,7 +18,7 @@ export default function ContactSection() {
 
 function ContactInfo() {
   return (
-    <section className="contact-info w-full md:w-4/5 lg:w-3/5">
+    <section className="w-full md:w-4/5 lg:w-3/5">
       <h2 className="text-3xl font-semibold mb-8">Contact info</h2>
       <p className="text-lg mb-4 text-secondary dark:text-secondary-dark">
         {DEVELOPER_NAME}
