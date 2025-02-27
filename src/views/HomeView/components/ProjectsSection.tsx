@@ -26,7 +26,7 @@ function ProjectsHeader() {
         Projects
       </h2>
       <span className="block text-center text-lg text-secondary dark:text-secondary-dark mb-12">
-        Here are the most recent projects I have worked with
+        Here are some of the projects I have worked on
       </span>
     </>
   );

@@ -13,9 +13,7 @@ export default function ToFlutterDemoSection() {
         Flutter lets you build native apps for multiple platforms from one
         codebase. Check out our demo to see Flutter in action.
       </p>
-      <div className="flex justify-center">
-        <LinkButton href={flutterDemoRoute}>Go to Flutter Demo</LinkButton>
-      </div>
+      <LinkButton href={flutterDemoRoute}>Go to Flutter Demo</LinkButton>
     </section>
   );
 }

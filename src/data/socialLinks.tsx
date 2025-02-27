@@ -1,4 +1,4 @@
-import { FaLinkedinIn, FaGithub, FaTwitter } from "react-icons/fa";
+import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
 const SOCIAL_LINKS = [
@@ -7,15 +7,11 @@ const SOCIAL_LINKS = [
     icon: FaLinkedinIn,
   },
   {
-    href: "https://github.com/xxxstudio",
+    href: "https://github.com/code-tiger",
     icon: FaGithub,
   },
   {
-    href: "https://x.com/xxxstudio",
-    icon: FaTwitter,
-  },
-  {
-    href: "mailto:xxxstudio@gmail.com",
+    href: "mailto:stevenyhtyeh@gmail.com",
     icon: MdEmail,
   },
 ];

@@ -19,9 +19,9 @@ export default function Footer() {
             </a>
           ))}
         </div>
-        <p className="text-sm">
-          &copy; {new Date().getFullYear() || "2025"} Your Company Name. All
-          rights reserved.
+        <p className="text-sm text-center w-[90%]">
+          &copy; {new Date().getFullYear() || "2025"} Proudly uncopyrighted.
+          Feel free to copy this code.
         </p>
       </div>
     </footer>

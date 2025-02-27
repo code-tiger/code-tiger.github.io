@@ -1,4 +1,4 @@
-export const formAction = "https://formspree.io/f/xovjozar";
+export const formAction = "https://formspree.io/f/mnqyokqd";
 
 export default function ContactForm() {
   return (

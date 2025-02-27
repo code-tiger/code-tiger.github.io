@@ -1,10 +1,14 @@
-import { flutterDemoRoute } from "@/app/flutter-demo/page";
-import { DEVELOPER_NAME, DEVELOPER_SLOGAN, PROFILE_PICTURE_URL } from "@/constants/config";
-import SOCIAL_LINKS from "@/data/socialLinks";
+import Link from "next/link";
+
 import ResponsiveImage from "@/components/ui/ResponsiveImage";
 import LinkButton from "@/components/ui/LinkButton";
-
-import Link from "next/link";
+import {
+  DEVELOPER_NAME,
+  DEVELOPER_SLOGAN,
+  PROFILE_PICTURE_URL,
+} from "@/constants/config";
+import SOCIAL_LINKS from "@/data/socialLinks";
+import { CONTACT_SECTION_ID } from "@/views/HomeView/components/ContactSection";
 
 export const HERO_SECTION_ID = "home-view-hero-section";
 
@@ -27,7 +31,7 @@ function HeroSectionGridContainer(props: { children: React.ReactNode }) {
     <div
       className={[
         // Mobile
-        "grid gap-6 grid-cols-[0.5fr_3fr]",
+        "grid gap-6 grid-cols-[1fr_4fr]",
         // Desktop
         "md:grid-cols-[100px_repeat(2,_1fr)] md:gap-x-5",
       ]
@@ -63,9 +67,7 @@ function HeroSectionContent() {
   return (
     <div className="col-[1/3] md:col-[unset]">
       <div className="flex flex-col gap-6">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
-          {DEVELOPER_NAME}
-        </h1>
+        <h1 className="text-4xl md:text-5xl font-bold">{DEVELOPER_NAME}</h1>
         <p className="text-xl md:text-2xl">{DEVELOPER_SLOGAN}</p>
         <HeroSectionAction />
       </div>
@@ -80,7 +82,7 @@ function HeroSectionLogo() {
         // base
         "w-[200px] h-[200px] rounded-full overflow-hidden",
         // desktop
-        "md:order-last",
+        "md:order-last md:ml-12",
       ]
         .join(" ")
         .trim()}
@@ -95,5 +97,7 @@ function HeroSectionLogo() {
 }
 
 function HeroSectionAction() {
-  return <LinkButton href={flutterDemoRoute}>See for yourself</LinkButton>;
+  return (
+    <LinkButton href={`#${CONTACT_SECTION_ID}`}>See for yourself</LinkButton>
+  );
 }
