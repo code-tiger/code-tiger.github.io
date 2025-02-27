@@ -8,9 +8,9 @@ import "@/styles/globals.css";
 import "@/views/HomeView/HomeView.css";
 
 export const metadata: Metadata = {
-  title: "Home | Code Machi Studio",
+  title: "Home | Yeh Hsuan Ting",
   description:
-    "We are a team of developers who are passionate about building great products",
+    "I am a software developer who is passionate about building great products",
 };
 
 export default function RootLayout({
