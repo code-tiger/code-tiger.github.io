@@ -1,19 +1,7 @@
-import { FaTwitter, FaGithub, FaLinkedin } from 'react-icons/fa';
+const DEVELOPER_NAME = "Yeh Hsuan Ting";
+const DEVELOPER_SLOGAN =
+  "Crafting innovative digital solutions with precision and passion";
+const EMAIL = "stevenyhtyeh@gmail.com";
+const PROFILE_PICTURE_URL = "https://i.ibb.co/MD2jswyq/profile-pic.webp";
 
-export const SOCIAL_LINKS = [
-  {
-    name: 'Twitter',
-    link: 'https://twitter.com/codetiger929',
-    Icon: FaTwitter
-  },
-  {
-    name: 'GitHub',
-    link: 'https://github.com/code-tiger',
-    Icon: FaGithub
-  },
-  {
-    name: 'LinkedIn',
-    link: 'https://www.linkedin.com/in/hsuan-ting-yeh-4a890b161/',
-    Icon: FaLinkedin
-  }
-];
+export { DEVELOPER_NAME, DEVELOPER_SLOGAN, EMAIL, PROFILE_PICTURE_URL };
