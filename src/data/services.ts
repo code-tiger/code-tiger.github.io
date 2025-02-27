@@ -10,40 +10,46 @@ import { Service } from "@/types/shared";
 
 const SERVICES: Service[] = [
   {
-    icon: FaMobileAlt,
+    Icon: FaMobileAlt,
     title: "Mobile Applications",
     description:
       "Building efficient apps for multiple platforms using Flutter frameworks.",
+    colorHex: "#3b82f6",
   },
   {
-    icon: FaLaptopCode,
+    Icon: FaLaptopCode,
     title: "Web Applications",
     description:
       "Creating modern, responsive web applications using React and Next.js with focus on performance and user experience.",
+    colorHex: "#10b981",
   },
   {
-    icon: FaComments,
+    Icon: FaComments,
     title: "Consultation",
     description:
       "A dedicated session to provide expert advice on optimizing software development strategy and technology choices.",
+    colorHex: "#f59e0b",
   },
   {
-    icon: FaChalkboardTeacher,
+    Icon: FaChalkboardTeacher,
     title: "Training and Workshops",
     description:
       "Providing training sessions and hands-on workshops to upskill teams in mobile development or technology best practices.",
+    colorHex: "#ef4444",
   },
   {
-    icon: FaPlug,
+    Icon: FaPlug,
     title: "Integrations",
     description:
       "Seamlessly connecting frontend apps with third-party services, APIs, and backend systems.",
+    colorHex: "#8b5cf6",
   },
   {
-    icon: FaChartLine,
+    Icon: FaChartLine,
     title: "Analytics",
     description:
       "Implementing robust analytics to track user behavior and improve app performance.",
+    colorHex: "#6366f1",
   },
 ];
 

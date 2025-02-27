@@ -1,6 +1,7 @@
 import React from "react";
 import { PROJECTS } from "@/data/projects";
 import ResponsiveImage from "@/components/ui/ResponsiveImage";
+import type { ProjectDatum } from "@/types/shared";
 
 export const PROJECTS_SECTION_ID = "home-view-projects-section";
 

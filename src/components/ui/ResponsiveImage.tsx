@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import Image from "next/image";
 
 /**
@@ -19,20 +20,11 @@ export default function ResponsiveImage(props: {
   readonly src: string;
   readonly alt: string;
   readonly aspectRatio?: "aspect-square" | "aspect-video";
-  readonly imageStyle?: unknown;
+  readonly imageStyle?: CSSProperties;
   readonly className?: string;
   readonly objectFit?: "cover" | "contain" | "fill" | "none" | "scale-down";
 }) {
-  const {
-    src,
-    alt,
-    aspectRatio,
-    imageStyle,
-    className = "",
-    objectFit = "cover",
-  } = props;
-
-  const objectFitClass = `object-${objectFit}`;
+  const { src, alt, aspectRatio, imageStyle, className = "" } = props;
 
   return (
     <div
@@ -40,13 +32,7 @@ export default function ResponsiveImage(props: {
         .join(" ")
         .trim()}
     >
-      <Image
-        className={["rounded-[20px]", objectFitClass].join(" ").trim()}
-        style={imageStyle}
-        src={src}
-        alt={alt}
-        fill
-      />
+      <Image style={imageStyle} src={src} alt={alt} fill unoptimized />
     </div>
   );
 }

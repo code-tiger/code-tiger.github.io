@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import type { IconType } from "react-icons";
 
 export type Technology = {
   name: string;
@@ -14,7 +14,8 @@ export type ProjectDatum = {
 };
 
 export type Service = {
-  icon: ReactNode;
+  Icon: IconType;
   title: string;
   description: string;
+  colorHex: string;
 };
