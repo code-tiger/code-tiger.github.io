@@ -21,7 +21,7 @@ export default function ResumeView() {
         <div className="flex justify-end mb-6">
           <button
             onClick={handlePrint}
-            className="flex items-center gap-2 bg-primary hover:bg-primary-dark text-on-primary px-4 py-2 rounded-md transition-colors"
+            className="flex items-center gap-2 bg-primary text-on-primary px-4 py-2 rounded-md"
           >
             <FaDownload className="w-4 h-4" />
             Download PDF
