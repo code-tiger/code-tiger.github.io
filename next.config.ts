@@ -4,14 +4,11 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
     remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "picsum.photos",
-      },
-      {
-        protocol: "https",
-        hostname: "i.ibb.co",
-      },
+      // e.g. https://picsum.photos/200/300
+      // {
+      //   protocol: "https",
+      //   hostname: "picsum.photos",
+      // },
     ],
   },
   output: "export",
