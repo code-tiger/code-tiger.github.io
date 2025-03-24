@@ -16,6 +16,12 @@ export default function ResumeView() {
 
     const printWindow = window.open("", "", "height=650,width=900");
 
+    if (!printWindow || !contentElement) {
+      alert("Unexpected error occurred. Sorry for the inconvenience.");
+
+      return;
+    }
+
     printWindow.document.write(
       "<html><head><title>Resume Content</title></head><body>"
     );
