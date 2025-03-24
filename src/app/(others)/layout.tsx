@@ -11,7 +11,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <BaseLayout className="relative" footer={<Footer />}>
+    <BaseLayout footer={<Footer />}>
       <FloatingButtonsContainer>{children}</FloatingButtonsContainer>
     </BaseLayout>
   );
