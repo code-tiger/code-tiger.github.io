@@ -51,10 +51,16 @@ function NavbarItems(props: {
   return (
     <ul className={`flex ${isFlexRow ? "flex-row" : "flex-col"} gap-5`}>
       {NAV_SECTIONS.map((section) => (
-        <li key={section.id}>
-          <a href={`#${section.id}`} onClick={handleOnClick}>
-            {section.name}
-          </a>
+        <li key={section.id || section.route}>
+          {section.route ? (
+            <a href={section.route} onClick={handleOnClick}>
+              {section.name}
+            </a>
+          ) : (
+            <a href={`#${section.id}`} onClick={handleOnClick}>
+              {section.name}
+            </a>
+          )}
         </li>
       ))}
     </ul>
