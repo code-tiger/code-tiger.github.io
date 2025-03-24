@@ -2,6 +2,7 @@ export const formAction = "https://formspree.io/f/mnqyokqd";
 
 export default function ContactForm(props: { className?: string }) {
   const { className } = props;
+
   return (
     <section
       className={["w-full md:w-4/5 lg:w-3/5 mb-10", className].join(" ").trim()}
