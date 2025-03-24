@@ -4,6 +4,7 @@ import Head from "next/head";
 import { ThemeProvider } from "next-themes";
 
 import { PROJECTS } from "@/data/projects";
+
 import "@/styles/globals.css";
 import "@/views/HomeView/HomeView.css";
 
