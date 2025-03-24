@@ -4,10 +4,6 @@ import ViewWrapper from "@/components/layout/ViewWrapper";
 import { FaDownload } from "react-icons/fa";
 
 export default function ResumeView() {
-  function handlePrint() {
-    window.print();
-  }
-
   // Common class names
   const sectionHeadingClasses = "text-2xl font-semibold mb-4 border-b pb-2";
   const companyNameClasses = "text-xl font-medium text-on-surface";
@@ -15,12 +11,26 @@ export default function ResumeView() {
   const listItemClasses = "list-disc list-inside space-y-1 text-on-surface";
   const sectionClasses = "mb-8";
 
+  function downloadResumePDF() {
+    const contentElement = document.querySelector(".resume-content");
+
+    const printWindow = window.open("", "", "height=650,width=900");
+
+    printWindow.document.write(
+      "<html><head><title>Resume Content</title></head><body>"
+    );
+    printWindow.document.write(contentElement.innerHTML);
+    printWindow.document.write("</body></html>");
+    printWindow.document.close();
+    printWindow.print();
+  }
+
   return (
     <ViewWrapper id="resume-view">
       <div className="max-w-4xl mx-auto p-8">
         <div className="flex justify-end mb-6">
           <button
-            onClick={handlePrint}
+            onClick={downloadResumePDF}
             className="flex items-center gap-2 bg-primary text-on-primary px-4 py-2 rounded-md"
           >
             <FaDownload className="w-4 h-4" />
@@ -28,7 +38,7 @@ export default function ResumeView() {
           </button>
         </div>
 
-        <div className="print:block bg-primary text-on-primary p-8 rounded-lg shadow-lg">
+        <div className="resume-content print:block bg-primary text-on-primary p-8 rounded-lg shadow-lg">
           <div className="mb-8 border-b pb-4">
             <h1 className="text-4xl font-bold mb-2">Yeh Hsuan Ting</h1>
             <p className={dateClasses}>
@@ -37,15 +47,11 @@ export default function ResumeView() {
           </div>
 
           <section className={sectionClasses}>
-            <h2 className={sectionHeadingClasses}>
-              Experience
-            </h2>
+            <h2 className={sectionHeadingClasses}>Experience</h2>
 
             <div className="mb-6">
               <div className="flex justify-between items-center mb-2">
-                <h3 className={companyNameClasses}>
-                  imersive | Paris
-                </h3>
+                <h3 className={companyNameClasses}>imersive | Paris</h3>
                 <p className={dateClasses}>03/2020 - 02/2025</p>
               </div>
               <p className={`${dateClasses} mb-2`}>Development Lead</p>
@@ -72,9 +78,7 @@ export default function ResumeView() {
 
             <div className="mb-6">
               <div className="flex justify-between items-center mb-2">
-                <h3 className={companyNameClasses}>
-                  Software Island | Taiwan
-                </h3>
+                <h3 className={companyNameClasses}>Software Island | Taiwan</h3>
                 <p className={dateClasses}>10/2018 - 02/2020</p>
               </div>
               <p className={`${dateClasses} mb-2`}>Software Developer</p>
@@ -99,9 +103,7 @@ export default function ResumeView() {
           </section>
 
           <section className={sectionClasses}>
-            <h2 className={sectionHeadingClasses}>
-              Skills
-            </h2>
+            <h2 className={sectionHeadingClasses}>Skills</h2>
             <p className="text-on-surface">
               Mobile application development, Technical leadership, Software
               architecture design, Database management, Work coordination,
@@ -111,30 +113,22 @@ export default function ResumeView() {
           </section>
 
           <section className={sectionClasses}>
-            <h2 className={sectionHeadingClasses}>
-              Education
-            </h2>
+            <h2 className={sectionHeadingClasses}>Education</h2>
             <div className="mb-2">
               <h3 className={companyNameClasses}>
                 Hong Kong Polytechnic University | Hong Kong
               </h3>
-              <p className={dateClasses}>
-                Civil Engineering | 03/2017
-              </p>
+              <p className={dateClasses}>Civil Engineering | 03/2017</p>
             </div>
           </section>
 
           <section className={sectionClasses}>
-            <h2 className={sectionHeadingClasses}>
-              Languages
-            </h2>
+            <h2 className={sectionHeadingClasses}>Languages</h2>
             <p className="text-on-surface">English, Chinese</p>
           </section>
 
           <section>
-            <h2 className={sectionHeadingClasses}>
-              Technical Skills
-            </h2>
+            <h2 className={sectionHeadingClasses}>Technical Skills</h2>
             <div className="grid grid-cols-2 gap-2 text-on-surface">
               <p>React & NextJS</p>
               <p>Tailwind CSS</p>
