@@ -91,6 +91,7 @@ function HeroSectionLogo() {
         src={PROFILE_PICTURE_URL}
         alt="Profile Picture"
         aspectRatio="aspect-square"
+        priority={true}
       />
     </div>
   );

@@ -23,8 +23,9 @@ export default function ResponsiveImage(props: {
   readonly imageStyle?: CSSProperties;
   readonly className?: string;
   readonly objectFit?: "cover" | "contain" | "fill" | "none" | "scale-down";
+  readonly priority?: boolean;
 }) {
-  const { src, alt, aspectRatio, imageStyle, className = "" } = props;
+  const { src, alt, aspectRatio, imageStyle, className = "", priority = false } = props;
 
   return (
     <div
@@ -32,7 +33,7 @@ export default function ResponsiveImage(props: {
         .join(" ")
         .trim()}
     >
-      <Image style={imageStyle} src={src} alt={alt} fill unoptimized />
+      <Image style={imageStyle} src={src} alt={alt} fill unoptimized priority={priority} />
     </div>
   );
 }

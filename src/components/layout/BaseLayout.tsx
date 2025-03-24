@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import { ThemeProvider } from "next-themes";
 import { Geist, Geist_Mono } from "next/font/google";
+import Head from "next/head";
+import { ThemeProvider } from "next-themes";
 
+import { PROJECTS } from "@/data/projects";
 import "@/styles/globals.css";
 import "@/views/HomeView/HomeView.css";
 
@@ -31,6 +33,17 @@ export default function BaseLayout(props: BaseLayoutProps) {
 
   return (
     <html lang="en" suppressHydrationWarning>
+      <Head>
+        {/* Add preload links for all project images */}
+        {PROJECTS.map((project) => (
+          <link
+            key={project.imageUrl}
+            rel="preload"
+            as="image"
+            href={project.imageUrl}
+          />
+        ))}
+      </Head>
       <body
         className={[
           geistSans.variable,
